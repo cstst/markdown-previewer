@@ -1,0 +1,54 @@
+.frame {
+  border: 1px solid black;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  &.visible {
+    &.editor {
+      height: 30vh;
+      width: 50vw;
+    }
+
+    &.previewer {
+      height: 50vh;
+      width: 70vw;
+    }
+  }
+
+  &.expanded {
+    height: 95vh;
+    width: 95vw;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &.editor {
+    textarea {
+      position: relative;
+      width: calc(100% - 4px);
+      height: 100%;
+      resize: none;
+      border: none;
+      outline: none;
+    } 
+  }
+
+  &.previewer {
+    
+  }
+}
+
