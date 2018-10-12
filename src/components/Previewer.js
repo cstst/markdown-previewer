@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 const Previewer = props => {
 
   const { input } = props;
-  const newInput = converter(input);
-  console.log(newInput);
+  const output = converter(input);
+  console.log(output);
   return (
     <Frame name="previewer">
-      <div className="conversion" dangerouslySetInnerHTML={{__html: newInput}}></div>
+      <div className="conversion" dangerouslySetInnerHTML={{__html: output}}></div>
     </Frame>
   );
 }
