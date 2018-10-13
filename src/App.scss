@@ -14,6 +14,11 @@
       margin: 0;
     }
   }
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
   &.visible {
     &.editor {
@@ -22,13 +27,13 @@
     }
 
     &.previewer {
-      height: 50vh;
+      min-height: 50vh;
       width: 70vw;
     }
   }
 
   &.expanded {
-    height: 95vh;
+    min-height: 95vh;
     width: 95vw;
   }
 
@@ -40,15 +45,15 @@
     textarea {
       position: relative;
       width: calc(100% - 4px);
-      height: 100%;
+      flex: 1;
       resize: none;
       border: none;
       outline: none;
     } 
   }
 
-  &.previewer {
-    
+  #preview {
+    padding: 1em 2em;
   }
 }
 

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { resize } from '../actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWindowMaximize, faWindowMinimize } from '@fortawesome/free-solid-svg-icons'
 
 class Frame extends Component {
 
   handleClick = e => {
-    this.props.resize(e.target.name);
+    this.props.resize(this.props.name);
   }
 
   render() {
@@ -19,10 +21,11 @@ class Frame extends Component {
           <h4>{capitalizedName}</h4>
           <button 
             onClick={this.handleClick}
-            name={name}
-          >X</button>
+          ><FontAwesomeIcon icon={expanded ? faWindowMinimize : faWindowMaximize}/></button>
         </div>
-        {children}
+        <div className="body">
+          {children}
+        </div>
       </div>
     );
   }

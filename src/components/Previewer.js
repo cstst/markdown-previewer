@@ -7,7 +7,7 @@ const Previewer = props => {
   const output = marked(props.input)
   return (
     <Frame name="previewer">
-      <div className="conversion" dangerouslySetInnerHTML={{__html: output}}></div>
+      <div id="preview" dangerouslySetInnerHTML={{__html: output}}></div>
     </Frame>
   );
 }
