@@ -29,6 +29,7 @@ This \`isInlineCode();\`
   componentDidMount() {
     this.props.input(this.state.input)
   }
+  
   handleChange = e => {
     const input = e.target.value;
     this.setState({input});
