@@ -1,7 +1,7 @@
 {
   "name": "markdown-previewer",
   "version": "0.1.0",
-  "homepage": "http://cstst.github.io/",
+  "homepage": "http://cstst.github.io/markdown-previewer",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
@@ -21,8 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
